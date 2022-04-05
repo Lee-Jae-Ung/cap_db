@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.capstone.SetSection">
+
+    <LinearLayout
+        android:background="@drawable/round_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_dsection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTION : "
+                android:textSize="15dp"
+                android:ems="4"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <EditText
+                android:id="@+id/edit_dsection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+            <Button
+                android:id="@+id/btn_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/round_setip"
+                android:layout_marginBottom="10dp"
+                android:text="insert" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_dpointid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POINTID : "
+                android:textSize="15dp"
+                android:ems="4"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <EditText
+                android:id="@+id/edit_dpointid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/round_setip"
+                android:layout_marginBottom="10dp"
+                android:layout_alignStart="@+id/btn_insert"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_dpointnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POINTNUM"
+                android:ems="4"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <EditText
+                android:id="@+id/edit_dpointnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="delete"
+                android:background="@drawable/round_setip"
+                android:layout_marginBottom="10dp"
+                android:layout_alignStart="@+id/btn_insert"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_ddvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEVNAME "
+
+                android:textSize="15dp"
+                android:ems="4"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <EditText
+                android:id="@+id/edit_ddvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName"
+                android:layout_toRightOf="@+id/text_id" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+            <Button
+                android:layout_gravity="right"
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/round_setip"
+                android:layout_marginBottom="10dp"
+                android:text="view" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_alignLeft="@+id/text_name"
+
+                android:text="Sort by "
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/check_dsection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Section"
+                    android:textSize="15dp"
+                    android:layout_toRightOf="@+id/text_sort"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignTop="@+id/text_sort" />
+                <CheckBox
+                    android:id="@+id/check_dpointid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PointID"
+                    android:textSize="15dp"
+                    android:layout_toRightOf="@+id/text_sort"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignTop="@+id/text_sort" />
+
+
+                <CheckBox
+                    android:id="@+id/check_dPointnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PointNUM"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignTop="@+id/text_sort" />
+
+
+                <CheckBox
+                    android:id="@+id/check_ddvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignTop="@+id/text_sort" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Section">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="PointID">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="PointNUM">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="DevName">
+
+        </TextView>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ListView
+            android:id="@+id/db_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></ListView>
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

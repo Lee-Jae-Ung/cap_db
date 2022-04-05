@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <ImageView
+
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/arrow">
+
+    </ImageView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2">
+        <TableRow>
+            <TextView
+                android:id="@+id/primarykey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical">
+            </TextView>
+            <TextView
+                android:id="@+id/ddname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="devicename"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pointid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pointid"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+    <android.widget.Button
+        android:background="@drawable/round_back"
+        android:id="@+id/feature"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/light_blue"
+        android:text="feature" />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
