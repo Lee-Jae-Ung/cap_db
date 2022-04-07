@@ -80,10 +80,12 @@ public class SDbOpenHelper {
 
     // Delete DB
     public boolean deleteColumn(long id){
+        // *****************AUTO_INCREMENT 초기화 및 재정렬****************
         return mDB.delete(DataBases.CreateSDB._TABLENAME0, "_id="+id, null) > 0;
     }
     // Select DB
     public Cursor selectColumns(){
+
         return mDB.query(DataBases.CreateSDB._TABLENAME0, null, null, null, null, null, null);
     }
 

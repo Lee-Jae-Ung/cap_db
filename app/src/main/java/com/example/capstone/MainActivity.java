@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             Cursor iCursor = mDDbOpenHelper.selectDevice(Integer.toString(i));
             while (iCursor.moveToNext()) {
 
-                @SuppressLint("Range") String tempDev = iCursor.getString(iCursor.getColumnIndex("devicename"));
+                @SuppressLint("Range") String tempPointnum = iCursor.getString(iCursor.getColumnIndex("pointnum"));
                 @SuppressLint("Range") String tempPointid = iCursor.getString(iCursor.getColumnIndex("pointid"));
 
-                ChildItem item = new ChildItem(tempDev,tempPointid);
+                ChildItem item = new ChildItem(tempPointnum,tempPointid);
                 monthArray.get(i - 1).add(item);
 
             }
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         Log.v("arrrray","setlist 진입");
         while (iCursor.moveToNext()) {
-            @SuppressLint("Range") String tempId = iCursor.getString(iCursor.getColumnIndex("_id"));
+
             @SuppressLint("Range") String tempSec = iCursor.getString(iCursor.getColumnIndex("section"));
             @SuppressLint("Range") String tempLoc = iCursor.getString(iCursor.getColumnIndex("location"));
             @SuppressLint("Range") String tempIp = iCursor.getString(iCursor.getColumnIndex("ip"));
