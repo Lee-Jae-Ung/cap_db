@@ -25,6 +25,7 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class DrawAEFeature extends AppCompatActivity {
@@ -211,8 +212,8 @@ public class DrawAEFeature extends AppCompatActivity {
             this.device = device;
         }
 
-        String resultText = "[NULL]";
-
+        //String[][] resultText;
+        ArrayList<ArrayList<String>> resultText = new ArrayList<>();
         @RequiresApi(api = Build.VERSION_CODES.N)
         @Override
         public void run() {
@@ -227,8 +228,8 @@ public class DrawAEFeature extends AppCompatActivity {
 
                     Thread.sleep(1000);
                     resultText = new Task().execute("http://"+ip+":50010/manage/Device/"+device).get();
-                    Log.v("resultText",""+resultText);
-                    JSONObject jsonObject = new JSONObject(resultText);
+                    //Log.v("resultText",""+resultText);
+                    JSONObject jsonObject = new JSONObject(resultText.get(0).get(0));
                     amplitude = Double.parseDouble(jsonObject.getString("AMPLITUDE"));
                     rms = Double.parseDouble(jsonObject.getString("RMS"));
                 } catch (InterruptedException e) {

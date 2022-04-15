@@ -2,7 +2,6 @@ package com.example.capstone;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,7 +104,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
 
 
         //그룹 펼쳐짐 여부에 따라 아이콘 변경
-        Log.v("child","(group) " + ip.getText());
+        //Log.v("child","(group) " + ip.getText());
 
         //리스트 아이템의 내용 설정
         section.setText(getGroup(groupPosition).getSection());
@@ -121,7 +120,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
         //Log.v("child","getChildView진입");
         View v = convertView;
         final Context context = parent.getContext();
-        String temp = "";
+        String type = "";
 
 
         if (v == null) {
@@ -134,33 +133,34 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
         TextView pointid = (TextView) v.findViewById(R.id.pointid);
 
 
-        Log.v("child","(child) group : "+groupPosition + ", child : " + childPosition);
+        //Log.v("child","(child) group : "+groupPosition + ", child : " + childPosition);
 
 
         prkey.setText(Long.toString(getChildId(groupPosition,childPosition) + 1));
         devname.setText(getChild(groupPosition, childPosition).getPointnum());
         pointid.setText(getChild(groupPosition, childPosition).getPointid());
-        Log.v("child","id"+getChildId(groupPosition,childPosition));
+        //Log.v("child","id"+getChildId(groupPosition,childPosition));
 
         //child_device = "device"+getChildId(groupPosition,childPosition);
 
 
         Button button3 = (Button) v.findViewById(R.id.feature);
-        if(getChild(groupPosition, childPosition).getPointnum().contains("AE")) {
-            temp = "AE"+getChild(groupPosition, childPosition).getPointid();
+        if(getChild(groupPosition, childPosition).getPointnum().contains("수소 압축기")) {
+            type = "2";
         }
-        else if(getChild(groupPosition, childPosition).getPointnum().contains("VIB")) {
-            temp = "VIB"+getChild(groupPosition, childPosition).getPointid();
+        else if(getChild(groupPosition, childPosition).getPointnum().contains("냉각수 펌프")) {
+            type = "3";
         }
 
-        String finalChild_device = temp;
-        Log.v("zzz",""+ finalChild_device);
+        String finalChild_type = type;
+        //Log.v("zzz",""+ finalChild_device);
         button3.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //status눌렀을때 실행되는 함수
-                Log.v("button3","눌려짐");
+                //Log.v("button3","눌려짐");
+                /*
                 if(getChild(groupPosition, childPosition).getPointnum().contains("AE")){
-                    Log.v("but","AE");
+                    //Log.v("but","AE");
 
                     Intent intent1 = new Intent(context.getApplicationContext(), DrawAEFeature.class);
                     intent1.putExtra("ip",getGroup(groupPosition).getIp());
@@ -168,14 +168,16 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
                     intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     context.startActivity(intent1);
                 }
-                else if(getChild(groupPosition, childPosition).getPointnum().contains("VIB")){
-                    Log.v("but","VIB");
+                */
+                //else if(getChild(groupPosition, childPosition).getPointnum().contains("VIB")){
+                    //Log.v("but","VIB");
                     Intent intent1 = new Intent(context.getApplicationContext(), DrawVIBFeature.class);
                     intent1.putExtra("ip",getGroup(groupPosition).getIp());
-                    intent1.putExtra("device",finalChild_device);
+                    intent1.putExtra("facility",getChild(groupPosition, childPosition).getPointid());
+                    intent1.putExtra("type",finalChild_type);
                     intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     context.startActivity(intent1);
-                }
+                //}
 
 
 
@@ -195,7 +197,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        Log.v("zzzz","group : "+groupPosition + ", child : "+childPosition);
+        //Log.v("zzzz","group : "+groupPosition + ", child : "+childPosition);
         return true;
     }
 

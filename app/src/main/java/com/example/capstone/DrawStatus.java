@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -95,16 +94,18 @@ public class DrawStatus extends AppCompatActivity {
         }
 
 
-        String resultText1 = "[NULL]";
+        //String resultText1[][]= null;
+        ArrayList<ArrayList<String>> resultText1 = new ArrayList<>();
 
         @RequiresApi(api = Build.VERSION_CODES.N)
         @Override
         public void run() {
 
             try {
-                Log.v("ipipip","status : "+ip);
+
                 resultText1 = new Task().execute("http://" + ip + ":50010/manage/Pc/info").get();
-                JSONObject jsonObject = new JSONObject(resultText1);
+                //Log.v("ipipip","status : "+resultText1.toString());
+                JSONObject jsonObject = new JSONObject(resultText1.get(0).get(0));
                 cpu = Double.parseDouble(jsonObject.getString("cpu").replace("%", ""));
                 ram_total = Double.parseDouble(jsonObject.getString("ram_total").replace("MB", ""));
                 ram_usage = Double.parseDouble(jsonObject.getString("ram_usage").replace("MB", ""));

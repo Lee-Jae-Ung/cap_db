@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
 
 
-
         mSDbOpenHelper = new SDbOpenHelper(this);
         mSDbOpenHelper.open();
         mSDbOpenHelper.create();

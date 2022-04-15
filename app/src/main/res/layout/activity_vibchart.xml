@@ -1,7 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="선택된 좌표 정보"
+                android:textStyle="bold">
+            </TextView>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜 : "
+                    android:layout_gravity="center_horizontal">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/vibdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date">
+                </TextView>
+            </TableRow>
+            <TableRow>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간 : "
+                    android:layout_gravity="center_horizontal">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/current_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X_value">
+
+                </TextView>
+            </TableRow>
+            <TableRow>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="값 : "
+                    android:layout_gravity="center_horizontal">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/current_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y_value">
+
+                </TextView>
+            </TableRow>
+            <TableRow>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="label : "
+                    android:layout_gravity="center_horizontal">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/selected_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택된 특징값">
+
+                </TextView>
+            </TableRow>
+
+
+        </TableLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="right|bottom">
+
+            <CheckBox
+                android:id="@+id/check_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30일"
+                android:layout_marginRight="10dp">
+
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/check_week"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7일"
+                android:layout_marginRight="10dp">
+
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/check_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1일"
+                android:layout_marginRight="10dp">
+
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/check_hour"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1시간">
+
+            </CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,12 +149,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="5dp"/>
+        <!--
         <View
             android:background="#808080"
             android:layout_width="match_parent"
             android:layout_height="2dp">
 
         </View>
+
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart7"
             android:layout_width="match_parent"
@@ -38,7 +176,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="5dp"/>
-
+        !-->
     </LinearLayout>
 
 </LinearLayout>
