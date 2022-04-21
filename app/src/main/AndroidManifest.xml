@@ -27,6 +27,8 @@
         <activity android:name=".DrawAEFeature"></activity>
         <activity android:name=".DrawVIBFeature"></activity>
         <activity android:name=".DrawStatus"></activity>
+        <activity android:name=".DrawTESTFeature"></activity>
+
     </application>
 
 </manifest>

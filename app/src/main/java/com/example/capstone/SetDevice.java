@@ -124,7 +124,8 @@ public class SetDevice extends AppCompatActivity implements View.OnClickListener
             Log.e("On Click", "nowIndex = " + nowIndex);
             Log.e("On Click", "Data: " + arrayData.get(position));
             String[] tempData = arrayData.get(position).split("\\s+");
-            Log.e("On Click", "Split Result = " + tempData);
+            Log.e("On Click", "Split Result = " + tempData.length);
+
             edit_dsection.setText(tempData[0].trim());
             edit_dpointid.setText(tempData[1].trim());
             edit_dpointnum.setText(tempData[2].trim());

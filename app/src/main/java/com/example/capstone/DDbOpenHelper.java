@@ -101,7 +101,7 @@ public class DDbOpenHelper {
     }
 
     public Cursor selectDevice(String section_str){
-        Cursor c = mDB.rawQuery( "SELECT * FROM device_list WHERE section =" + section_str + ";", null);
+        Cursor c = mDB.rawQuery( "SELECT * FROM device_list WHERE section =" + section_str + " order by pointid;", null);
         return c;
     }
 

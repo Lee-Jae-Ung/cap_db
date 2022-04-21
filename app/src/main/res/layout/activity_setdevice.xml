@@ -23,9 +23,9 @@
                 android:id="@+id/text_dsection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SECTION : "
+                android:text="SECTION"
                 android:textSize="15dp"
-                android:ems="4"
+                android:ems="6"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -62,9 +62,9 @@
                 android:id="@+id/text_dpointid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POINTID : "
+                android:text="POINTID"
                 android:textSize="15dp"
-                android:ems="4"
+                android:ems="6"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -96,14 +96,14 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/text_dpointnum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POINTNUM"
-                android:ems="4"
+                android:text="POINTNAME"
+                android:ems="6"
                 android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -141,10 +141,10 @@
                 android:id="@+id/text_ddvname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DEVNAME "
+                android:text="SENSOR_TYPE "
 
                 android:textSize="15dp"
-                android:ems="4"
+                android:ems="6"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -218,7 +218,7 @@
                     android:id="@+id/check_dPointnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PointNUM"
+                    android:text="PointNAME"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_alignTop="@+id/text_sort" />
@@ -228,7 +228,7 @@
                     android:id="@+id/check_ddvname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Device"
+                    android:text="Sensor"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="10dp"
@@ -278,7 +278,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="PointNUM">
+            android:text="PointName">
 
         </TextView>
 

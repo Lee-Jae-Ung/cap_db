@@ -4,151 +4,256 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
-
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_black"
+        android:layout_gravity="right|bottom">
         <TableLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="선택된 좌표 정보"
-                android:textStyle="bold">
-            </TextView>
+            android:layout_height="wrap_content">
             <TableRow>
-                <TextView
+                <CheckBox
+                    android:id="@+id/check_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="날짜 : "
-                    android:layout_gravity="center_horizontal">
-                </TextView>
+                    android:text="30일"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
 
-                <TextView
-                    android:id="@+id/vibdate"
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/check_week"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date">
-                </TextView>
+                    android:text="7일"
+                    android:layout_marginRight="10dp">
+
+                </CheckBox>
+                <CheckBox
+                    android:id="@+id/check_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1일"
+                    android:layout_marginRight="10dp">
+
+                </CheckBox>
+                <CheckBox
+                    android:id="@+id/check_hour"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="1시간">
+
+                </CheckBox>
             </TableRow>
-            <TableRow>
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="시간 : "
-                    android:layout_gravity="center_horizontal">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/current_x"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="X_value">
-
-                </TextView>
-            </TableRow>
-            <TableRow>
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="값 : "
-                    android:layout_gravity="center_horizontal">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/current_y"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Y_value">
-
-                </TextView>
-            </TableRow>
-            <TableRow>
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="label : "
-                    android:layout_gravity="center_horizontal">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/selected_point"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="선택된 특징값">
-
-                </TextView>
-            </TableRow>
-
-
         </TableLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="right|bottom">
 
-            <CheckBox
-                android:id="@+id/check_month"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="30일"
-                android:layout_marginRight="10dp">
 
-            </CheckBox>
-
-            <CheckBox
-                android:id="@+id/check_week"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7일"
-                android:layout_marginRight="10dp">
-
-            </CheckBox>
-            <CheckBox
-                android:id="@+id/check_day"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1일"
-                android:layout_marginRight="10dp">
-
-            </CheckBox>
-            <CheckBox
-                android:id="@+id/check_hour"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1시간">
-
-            </CheckBox>
-        </LinearLayout>
     </LinearLayout>
-
-
-
-
-
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical">
+
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart6"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_black"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right">
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/suitextrabold"
+                        android:text="날짜 : ">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/vibdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시간 : "
+                        android:fontFamily="@font/suitextrabold"
+
+                        android:layout_gravity="center_horizontal">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/current_x"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical">
+                <TableRow>
+                    <ImageView
+                        android:background="@drawable/navy_circle"
+                        android:layout_width="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/current_label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:fontFamily="@font/suitextrabold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/current_y1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:background="@drawable/green_circle"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/current_label2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/suitextrabold"
+
+                        android:layout_marginRight="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/current_y2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:background="@drawable/yellow_circle"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/current_label3"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:fontFamily="@font/suitextrabold"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/current_y3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:background="@drawable/red_circle"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/current_label4"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:fontFamily="@font/suitextrabold"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/current_y4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </TableRow>
+            </TableLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
         <!--
         <View
             android:background="#808080"
@@ -177,6 +282,6 @@
             android:layout_weight="1"
             android:layout_marginTop="5dp"/>
         !-->
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

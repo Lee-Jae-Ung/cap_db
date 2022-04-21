@@ -1,11 +1,13 @@
 package com.example.capstone;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -33,6 +35,7 @@ public class DrawStatus extends AppCompatActivity {
     //double rms = 0.0;
     //double peak = 0.0;
 
+    public static Context stContext;
 
     double cpu = 0.0;
     double ram_total=0.0;
@@ -51,13 +54,12 @@ public class DrawStatus extends AppCompatActivity {
         Intent intent = getIntent();
         ip = intent.getStringExtra("ip");
 
-
+        stContext=this;
 
         pieChart = (PieChart)findViewById(R.id.chart2);
         pieChart2 = (PieChart)findViewById(R.id.chart3);
         text_ram_total = (TextView)findViewById(R.id.ram_total);
         text_ram_usage = (TextView)findViewById(R.id.ram_usage);
-
 
 
         HandlerThread handlerThread = new HandlerThread("STATUS");
@@ -104,13 +106,16 @@ public class DrawStatus extends AppCompatActivity {
             try {
 
                 resultText1 = new Task().execute("http://" + ip + ":50010/manage/Pc/info").get();
-                //Log.v("ipipip","status : "+resultText1.toString());
+
+
+                Log.v("ipipip", "status : " + resultText1.get(0).get(0));
                 JSONObject jsonObject = new JSONObject(resultText1.get(0).get(0));
                 cpu = Double.parseDouble(jsonObject.getString("cpu").replace("%", ""));
                 ram_total = Double.parseDouble(jsonObject.getString("ram_total").replace("MB", ""));
                 ram_usage = Double.parseDouble(jsonObject.getString("ram_usage").replace("MB", ""));
                 ram_usage_per = Double.parseDouble(jsonObject.getString("ram_usage_per").replace("%", ""));
-            } catch (JSONException e) {
+
+            }catch (JSONException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
                 e.printStackTrace();

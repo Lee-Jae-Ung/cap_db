@@ -2,6 +2,7 @@ package com.example.capstone;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +71,24 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
             v = inflater.inflate(R.layout.parent_list, parent, false);
         }
 
+        /*
+        ImageView conn = (ImageView) v.findViewById(R.id.default_status);
+        ArrayList<ArrayList<String>> resultText1 = new ArrayList<>();
+        try {
+            resultText1 = new Task().execute("http://" + getGroup(groupPosition).getIp() + ":50010/manage/Pc/connection").get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(resultText1.get(0).get(0).equals("timeout")){
+            conn.setImageResource(R.drawable.red_circle);
+        }
+        else{
+            conn.setImageResource(R.drawable.green_circle);
+        }
+*/
+
         //View들은 반드시 아이템 레이아웃을 inflate한 뒤에 작성할 것
         TextView section = (TextView) v.findViewById(R.id.section) ;
         TextView location = (TextView) v.findViewById(R.id.location);
@@ -80,6 +99,8 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
         button1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //status눌렀을때 실행되는 함수
+                Log.v("parent","status실행됨");
+
                 Intent intent1 = new Intent(context.getApplicationContext(),DrawStatus.class);
                 intent1.putExtra("ip",getGroup(groupPosition).getIp());
                 context.startActivity(intent1);
@@ -102,7 +123,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
             }
         });
 
-
+        Log.v("parent","실행됨");
         //그룹 펼쳐짐 여부에 따라 아이콘 변경
         //Log.v("child","(group) " + ip.getText());
 
@@ -145,11 +166,14 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
 
 
         Button button3 = (Button) v.findViewById(R.id.feature);
-        if(getChild(groupPosition, childPosition).getPointnum().contains("수소 압축기")) {
+        if(getChild(groupPosition, childPosition).getPointnum().contains("수소압축기")) {
             type = "2";
         }
-        else if(getChild(groupPosition, childPosition).getPointnum().contains("냉각수 펌프")) {
+        else if(getChild(groupPosition, childPosition).getPointnum().contains("냉각수펌프")) {
             type = "3";
+        }
+        else if(getChild(groupPosition, childPosition).getPointnum().contains("test")) {
+            type = "test";
         }
 
         String finalChild_type = type;
@@ -158,18 +182,18 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
             public void onClick(View v) {
                 //status눌렀을때 실행되는 함수
                 //Log.v("button3","눌려짐");
-                /*
-                if(getChild(groupPosition, childPosition).getPointnum().contains("AE")){
+
+                if(finalChild_type.equals("test")){
                     //Log.v("but","AE");
 
-                    Intent intent1 = new Intent(context.getApplicationContext(), DrawAEFeature.class);
+                    Intent intent1 = new Intent(context.getApplicationContext(), DrawTESTFeature.class);
                     intent1.putExtra("ip",getGroup(groupPosition).getIp());
-                    intent1.putExtra("device",finalChild_device);
+                    intent1.putExtra("point",getChild(groupPosition, childPosition).getPointid());
                     intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     context.startActivity(intent1);
                 }
-                */
-                //else if(getChild(groupPosition, childPosition).getPointnum().contains("VIB")){
+
+                else {
                     //Log.v("but","VIB");
                     Intent intent1 = new Intent(context.getApplicationContext(), DrawVIBFeature.class);
                     intent1.putExtra("ip",getGroup(groupPosition).getIp());
@@ -177,7 +201,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
                     intent1.putExtra("type",finalChild_type);
                     intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     context.startActivity(intent1);
-                //}
+                }
 
 
 
