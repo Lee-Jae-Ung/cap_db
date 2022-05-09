@@ -104,6 +104,9 @@ public class SetDevice extends AppCompatActivity implements View.OnClickListener
         btn_Insert.setEnabled(true);
         btn_Update.setEnabled(false);
         btn_delete.setEnabled(false);
+
+        getSupportActionBar().setTitle("장비 설정");
+
     }
 
     public void setInsertMode(){
@@ -177,13 +180,14 @@ public class SetDevice extends AppCompatActivity implements View.OnClickListener
         while(iCursor.moveToNext()){
             @SuppressLint("Range") String tempIndex = iCursor.getString(iCursor.getColumnIndex("_id"));
             @SuppressLint("Range") String tempSection = iCursor.getString(iCursor.getColumnIndex("section"));
-            tempSection = setTextLength(tempSection,10);
+            tempSection = setTextLength(tempSection,15);
             @SuppressLint("Range") String tempPointid = iCursor.getString(iCursor.getColumnIndex("pointid"));
-            tempPointid = setTextLength(tempPointid,10);
+            tempPointid = setTextLength(tempPointid,15);
             @SuppressLint("Range") String tempPointnum = iCursor.getString(iCursor.getColumnIndex("pointnum"));
-            tempPointnum = setTextLength(tempPointnum,10);
+            tempPointnum = setTextLength(tempPointnum,20);
             @SuppressLint("Range") String tempDvname = iCursor.getString(iCursor.getColumnIndex("devicename"));
             tempDvname = setTextLength(tempDvname,10);
+
 
 
             String Result = tempSection + tempPointid + tempPointnum + tempDvname;

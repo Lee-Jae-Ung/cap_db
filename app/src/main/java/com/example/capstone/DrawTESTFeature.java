@@ -169,6 +169,8 @@ public class DrawTESTFeature extends AppCompatActivity {
 
                     Thread.sleep(1000);
                     resultText = new Task().execute("http://"+ip+":50010/manage/Device/Test"+point).get();
+                    //resultText = new Task().execute("http://98cd-203-250-77-240.ngrok.io/manage/Device/Test"+point).get();
+
                     //Log.v("resultText",""+resultText);
                     JSONObject jsonObject = new JSONObject(resultText.get(0).get(0));
                     rms = Double.parseDouble(jsonObject.getString("RMS1"));

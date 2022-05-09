@@ -1,5 +1,6 @@
 package com.example.capstone;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -71,23 +73,20 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
             v = inflater.inflate(R.layout.parent_list, parent, false);
         }
 
-        /*
-        ImageView conn = (ImageView) v.findViewById(R.id.default_status);
-        ArrayList<ArrayList<String>> resultText1 = new ArrayList<>();
-        try {
-            resultText1 = new Task().execute("http://" + getGroup(groupPosition).getIp() + ":50010/manage/Pc/connection").get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        if(resultText1.get(0).get(0).equals("timeout")){
-            conn.setImageResource(R.drawable.red_circle);
-        }
-        else{
-            conn.setImageResource(R.drawable.green_circle);
-        }
-*/
+
+        //ImageView conn = (ImageView) v.findViewById(R.id.default_status);
+        //ArrayList<ArrayList<String>> resultText1 = new ArrayList<>();
+
+        //resultText1 = new Task().execute("http://" + getGroup(groupPosition).getIp() + ":50010/manage/Pc/connection").get();
+
+
+
+        //Log.v("func",""+resultText1.get(0).get(0).toString());
+        //st = new Task().execute("http://" + getGroup(groupPosition).getIp() + ":50010/manage/Pc/connection").getStatus().toString();
+        //Log.v("status",st);
+
+
+
 
         //View들은 반드시 아이템 레이아웃을 inflate한 뒤에 작성할 것
         TextView section = (TextView) v.findViewById(R.id.section) ;
@@ -208,16 +207,44 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
             }
         });
 
+        Button button4 = (Button) v.findViewById(R.id.dialog_img_button);
+        button4.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                //status눌렀을때 실행되는 함수
+                //Log.v("button3","눌려짐");
+
+                Dialog dialog = new Dialog(MainActivity.mContext);
+                dialog.setContentView(R.layout.activity_imgdialog);
+                TextView title = dialog.findViewById(R.id.dialog_title);
+                ImageView iv1 = dialog.findViewById(R.id.image1);
+                Button ok_button = dialog.findViewById(R.id.dialog_btn_ok);
 
 
+                title.setText(getChild(groupPosition, childPosition).getPointnum());
+                if(finalChild_type.equals("2")) {
+                    iv1.setImageResource(R.drawable.img_3691_cp);
+                }
+                else if(finalChild_type.equals("3")){
+                    iv1.setImageResource(R.drawable.img_3709_cp);
 
+                }
+                else if(finalChild_type.equals("test")){
+                    iv1.setImageResource(R.drawable.hydro);
 
+                }
 
+                dialog.show();
+                ok_button.setOnClickListener(view -> dialog.dismiss());
+
+            }
+        });
 
 
 
         return v;
     }
+
+
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {

@@ -7,7 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,16 +49,29 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
     public TextView cur_y3;
     public TextView cur_y4;
 
+    public TextView cur_y1_1;
+    public TextView cur_y2_1;
+    public TextView cur_y3_1;
+    public TextView cur_y4_1;
+
+    public TextView cur_y1_2;
+    public TextView cur_y2_2;
+    public TextView cur_y3_2;
+    public TextView cur_y4_2;
+
+    public ImageView fac_img;
+
+
     public TextView selec_point1;
     public TextView selec_point2;
     public TextView selec_point3;
     public TextView selec_point4;
 
 
-    public CheckBox check_hour;
-    public CheckBox check_day;
-    public CheckBox check_week;
-    public CheckBox check_month;
+    public RadioButton check_hour;
+    public RadioButton check_day;
+    public RadioButton check_week;
+    public RadioButton check_month;
 
 
     String period="day";
@@ -112,7 +126,7 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_vibchart);
 
         context_main = this;
-
+        fac_img = (ImageView) findViewById(R.id.fac_img);
 
 
         Intent intent = getIntent();
@@ -128,6 +142,8 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
             label2 = "CIV";
             label3 = "PHV1";
             label4 = "PHV2";
+            fac_img.setBackground(getResources().getDrawable(R.drawable.hydro));
+            getSupportActionBar().setTitle("SDG 수소 압축기");
 
         }
         else if(type.equals("3")){
@@ -135,6 +151,9 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
             label2 = "MIA";
             label3 = "PIH";
             label4 = "PIV";
+            fac_img.setBackground(getResources().getDrawable(R.drawable.pump));
+            getSupportActionBar().setTitle("SDG 냉각수 펌프");
+
 
         }
         //여기 추가
@@ -159,14 +178,27 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
         selec_point4 = (TextView) findViewById(R.id.current_label4);
         cur_y4 = (TextView) findViewById(R.id.current_y4);
 
-        check_hour = (CheckBox) findViewById(R.id.check_hour);
+/*
+        cur_y1_1 = (TextView) findViewById(R.id.current_y1_1);
+        cur_y1_2 = (TextView) findViewById(R.id.current_y1_2);
+        cur_y2_1 = (TextView) findViewById(R.id.current_y2_1);
+        cur_y2_2 = (TextView) findViewById(R.id.current_y2_2);
+        cur_y3_1 = (TextView) findViewById(R.id.current_y3_1);
+        cur_y3_2 = (TextView) findViewById(R.id.current_y3_2);
+        cur_y4_1 = (TextView) findViewById(R.id.current_y4_1);
+        cur_y4_2 = (TextView) findViewById(R.id.current_y4_2);
+*/
+
+        check_hour = (RadioButton) findViewById(R.id.check_hour);
         check_hour.setOnClickListener(this);
-        check_day = (CheckBox) findViewById(R.id.check_day);
+        check_day = (RadioButton) findViewById(R.id.check_day);
         check_day.setOnClickListener(this);
-        check_week = (CheckBox) findViewById(R.id.check_week);
+        check_week = (RadioButton) findViewById(R.id.check_week);
         check_week.setOnClickListener(this);
-        check_month = (CheckBox) findViewById(R.id.check_month);
+        check_month = (RadioButton) findViewById(R.id.check_month);
         check_month.setOnClickListener(this);
+
+
 
         //HandlerThread handlerThread2 = new HandlerThread("VIB_FEATURE2");
         //handlerThread2.start();
@@ -208,6 +240,22 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
                 cur_y2.setText(""+rms2_darr[(int)e.getX()]);
                 cur_y3.setText(""+rms3_darr[(int)e.getX()]);
                 cur_y4.setText(""+rms4_darr[(int)e.getX()]);
+
+/*
+                cur_y1_1.setText(label_group.get(0));
+                cur_y2_1.setText(label_group.get(1));
+                cur_y3_1.setText(label_group.get(2));
+                cur_y4_1.setText(label_group.get(3));
+
+
+                cur_y1_2.setText(""+rms1_darr[(int)e.getX()]);
+                cur_y2_2.setText(""+rms2_darr[(int)e.getX()]);
+                cur_y3_2.setText(""+rms3_darr[(int)e.getX()]);
+                cur_y4_2.setText(""+rms4_darr[(int)e.getX()]);
+*/
+
+
+
 
                 vibdate.setText(temp[0]);
                 //selec_point.setText(label_group.get(h.getDataSetIndex()));
@@ -292,11 +340,14 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
         leftAxis.setAxisMaximum((float)10.0);
         leftAxis.setAxisMinimum((float)-1.0);
 
+
         leftAxis.setEnabled(true);
         leftAxis.setTextColor(getResources().getColor(R.color.black));
         leftAxis.setDrawAxisLine(true);
         leftAxis.setDrawTopYLabelEntry(true);
         leftAxis.setAxisLineColor(getResources().getColor(R.color.black));
+
+        leftAxis.setDrawLabels(true);
         //leftAxis.setDrawGridLines(false);
         //leftAxis.setGridColor(getResources().getColor(R.color.white));
 
@@ -418,6 +469,8 @@ public class DrawVIBFeature extends AppCompatActivity implements View.OnClickLis
 
 
             resultText1 = new Task().execute("http://203.250.77.240:50010/manage/Device/SDG" + facility + ".csv/" + period).get();
+            //resultText1 = new Task().execute("http://98cd-203-250-77-240.ngrok.io/manage/Device/SDG" + facility + ".csv/" + period).get();
+
 
             if(resultText1.get(0).get(0).equals("timeout")){
                 Toast myToast = Toast.makeText(getApplicationContext(),"서버 연결X", Toast.LENGTH_SHORT);

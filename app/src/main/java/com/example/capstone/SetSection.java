@@ -93,6 +93,8 @@ public class SetSection extends AppCompatActivity implements View.OnClickListene
 
         showDatabase(sort);
 
+        getSupportActionBar().setTitle("구간 설정");
+
         btn_Insert.setEnabled(true);
         btn_Update.setEnabled(false);
         btn_delete.setEnabled(false);
@@ -166,11 +168,11 @@ public class SetSection extends AppCompatActivity implements View.OnClickListene
         while(iCursor.moveToNext()){
             @SuppressLint("Range") String tempIndex = iCursor.getString(iCursor.getColumnIndex("_id"));
             @SuppressLint("Range") String tempSection = iCursor.getString(iCursor.getColumnIndex("section"));
-            tempSection = setTextLength(tempSection,10);
+            tempSection = setTextLength(tempSection,18);
             @SuppressLint("Range") String tempLocation = iCursor.getString(iCursor.getColumnIndex("location"));
-            tempLocation = setTextLength(tempLocation,10);
+            tempLocation = setTextLength(tempLocation,22);
             @SuppressLint("Range") String tempIp = iCursor.getString(iCursor.getColumnIndex("ip"));
-            tempIp = setTextLength(tempIp,10);
+            tempIp = setTextLength(tempIp,20);
 
 
             String Result = tempSection + tempLocation + tempIp;

@@ -23,9 +23,10 @@
                 android:id="@+id/text_dsection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SECTION"
+                android:text="구간"
+                android:textAlignment="center"
                 android:textSize="15dp"
-                android:ems="6"
+                android:ems="4"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -37,7 +38,7 @@
                 android:ems="7"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -62,9 +63,10 @@
                 android:id="@+id/text_dpointid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POINTID"
+                android:text="설비ID"
+                android:textAlignment="center"
                 android:textSize="15dp"
-                android:ems="6"
+                android:ems="4"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -76,7 +78,7 @@
                 android:ems="7"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -102,8 +104,9 @@
                 android:id="@+id/text_dpointnum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POINTNAME"
-                android:ems="6"
+                android:text="설비명"
+                android:textAlignment="center"
+                android:ems="4"
                 android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -115,7 +118,7 @@
                 android:ems="7"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
 
             <View
                 android:layout_width="0dp"
@@ -141,10 +144,11 @@
                 android:id="@+id/text_ddvname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SENSOR_TYPE "
+                android:text="센서타입 "
+                android:textAlignment="center"
 
                 android:textSize="15dp"
-                android:ems="6"
+                android:ems="4"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp" />
@@ -156,8 +160,7 @@
                 android:ems="7"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
-                android:inputType="textPersonName"
-                android:layout_toRightOf="@+id/text_id" />
+                android:inputType="text" />
 
             <View
                 android:layout_width="0dp"
@@ -198,7 +201,7 @@
                     android:id="@+id/check_dsection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Section"
+                    android:text="구간"
                     android:textSize="15dp"
                     android:layout_toRightOf="@+id/text_sort"
                     android:layout_marginLeft="3dp"
@@ -207,7 +210,7 @@
                     android:id="@+id/check_dpointid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PointID"
+                    android:text="장비ID"
                     android:textSize="15dp"
                     android:layout_toRightOf="@+id/text_sort"
                     android:layout_marginLeft="3dp"
@@ -218,7 +221,7 @@
                     android:id="@+id/check_dPointnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PointNAME"
+                    android:text="장비명"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_alignTop="@+id/text_sort" />
@@ -228,7 +231,7 @@
                     android:id="@+id/check_ddvname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sensor"
+                    android:text="센서타입"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="10dp"
@@ -256,54 +259,79 @@
 
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Section">
-
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="PointID">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="PointName">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="DevName">
-
-        </TextView>
-    </LinearLayout>
-    <ScrollView
-        android:id="@+id/scroll_view"
+        android:background="@drawable/round_control"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:fillViewport="true"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <ListView
-            android:id="@+id/db_list_view"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"></ListView>
-    </ScrollView>
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="구간"
+                android:ems="3">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="장비ID"
+                android:ems="6">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="장비명"
+                android:ems="6">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="센서타입">
+
+            </TextView>
+        </LinearLayout>
+        <View
+            android:background="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_height="3dp">
+
+        </View>
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ListView
+                android:id="@+id/db_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
+    </LinearLayout>
+
+
 
 
 

@@ -23,7 +23,10 @@
                 android:id="@+id/text_ssection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SECTION : "
+                android:text="구간번호 "
+                android:textAlignment="center"
+
+                android:textStyle="bold"
                 android:textSize="15dp"
                 android:ems="4"
 
@@ -58,7 +61,32 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_slocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구간명 "
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:ems="4"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
 
+            <EditText
+                android:id="@+id/edit_slocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -81,49 +109,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/text_slocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location  : "
-                android:ems="4"
-                android:textSize="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp" />
-
-            <EditText
-                android:id="@+id/edit_slocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="7"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"
-                android:inputType="textPersonName" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-            </View>
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="delete"
-                android:background="@drawable/round_setip"
-                android:layout_marginBottom="10dp"
-                android:layout_alignStart="@+id/btn_insert"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
                 android:id="@+id/text_sIp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IP              : "
+                android:text="IP"
+                android:textAlignment="center"
 
                 android:textSize="15dp"
                 android:ems="4"
@@ -147,15 +137,30 @@
                 android:layout_weight="1">
             </View>
             <Button
-                android:layout_gravity="right"
-                android:id="@+id/btn_select"
+                android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_marginEnd="12dp"
+                android:layout_marginRight="10dp"
+                android:text="delete"
                 android:background="@drawable/round_setip"
                 android:layout_marginBottom="10dp"
-                android:text="view" />
+                android:layout_alignStart="@+id/btn_insert"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_white">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
 
         </LinearLayout>
 
@@ -180,7 +185,7 @@
                     android:id="@+id/check_ssection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Section"
+                    android:text="구간번호"
                     android:textSize="15dp"
                     android:layout_toRightOf="@+id/text_sort"
                     android:layout_marginLeft="3dp"
@@ -190,7 +195,7 @@
                     android:id="@+id/check_slocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Location"
+                    android:text="구간명"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_alignTop="@+id/text_sort" />
@@ -200,7 +205,7 @@
                     android:id="@+id/check_sip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ip"
+                    android:text="IP"
                     android:textSize="15dp"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="10dp"
@@ -211,6 +216,16 @@
                     android:layout_height="0dp"
                     android:layout_weight="1">
                 </View>
+                <Button
+                    android:layout_gravity="right"
+                    android:id="@+id/btn_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/round_setip"
+                    android:layout_marginBottom="10dp"
+                    android:text="view" />
 
             </LinearLayout>
 
@@ -228,47 +243,72 @@
 
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Section">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Location">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="IP">
-
-        </TextView>
-    </LinearLayout>
-    <ScrollView
-        android:id="@+id/scroll_view"
+        android:background="@drawable/round_control"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
-        android:fillViewport="true"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <ListView
-            android:id="@+id/db_list_view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"></ListView>
-    </ScrollView>
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="구간번호"
+                android:ems="4">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="구간명"
+                android:ems="8">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="IP"
+                android:ems="4">
+
+            </TextView>
+        </LinearLayout>
+        <View
+            android:background="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp">
+
+        </View>
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ListView
+                android:id="@+id/db_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
+    </LinearLayout>
+
+
 
 
 

@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         listView.setGroupIndicator(null); //리스트뷰 기본 아이콘 표시 여부
         setListItems();
         setChild();
+        mSDbOpenHelper.close();
     }
 
 
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
         }
         Log.v("arrrray","setlist 진입");
-
+        mDDbOpenHelper.close();
         count=0;
         setListItems();
 
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
             Log.v("arrrray",tempSec);
         }
-
+        mSDbOpenHelper.close();
 
         adapter.notifyDataSetChanged();
     }

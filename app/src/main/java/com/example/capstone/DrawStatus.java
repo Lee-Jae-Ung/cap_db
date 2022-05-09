@@ -106,6 +106,7 @@ public class DrawStatus extends AppCompatActivity {
             try {
 
                 resultText1 = new Task().execute("http://" + ip + ":50010/manage/Pc/info").get();
+                //resultText1 = new Task().execute("http://98cd-203-250-77-240.ngrok.io/manage/Pc/info").get();
 
 
                 Log.v("ipipip", "status : " + resultText1.get(0).get(0));

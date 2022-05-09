@@ -32,15 +32,19 @@ public class Task extends AsyncTask<String, Void, ArrayList<ArrayList<String>>> 
     String info;
     int rescode;
 
+    HttpURLConnection conn;
+
     Handler handler = new Handler();
     @Override
     protected ArrayList<ArrayList<String>> doInBackground(String... strings) {
         URL url = null;
 
+
         try{
+            Log.v("abcd","task진입");
             url = new URL(strings[0]);
 
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn = (HttpURLConnection) url.openConnection();
             conn.setConnectTimeout(3000);
             //rescode = conn.getResponseCode();
 
@@ -132,19 +136,28 @@ public class Task extends AsyncTask<String, Void, ArrayList<ArrayList<String>>> 
             }
             else{
                 //Log.i("receiveMsg",conn.getResponseCode() + "Error");
-                //Log.i("abcd","비정상임 타임아웃 Error");
+                Log.i("abcd","else 비정상임 타임아웃 Error");
                 //Log.i("receiveMsg",""+conn.getResponseCode());
 
             }
         } catch (MalformedURLException e) {
            // Log.i("receiveMsg","연결안됨");
             e.printStackTrace();
+            return result123;
         } catch (IOException e){
             Log.i("abcd","타임아웃 예외발생");
+            int a=0;
+            try {
+                a = conn.getResponseCode();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+
+
             //Log.i("receiveMsg",""+rescode);
 
             //e.printStackTrace();
-
+            conn.disconnect();
             ArrayList<String> msg = new ArrayList<>();
             result123 = new ArrayList<>();
             msg.add("timeout");
@@ -154,12 +167,12 @@ public class Task extends AsyncTask<String, Void, ArrayList<ArrayList<String>>> 
 
 
             return result123;
-        } finally {
-            Log.i("receiveMsg","무조건 실행");
-            Log.i("receiveMsg",""+rescode);
-
         }
 
         return result123;
     }
+
+
+
+
 }
