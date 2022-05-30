@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_intro"
-        android:layout_centerInParent="true">
 
-    </ImageView>
     <TextView
-        android:text="CAPSTONE"
-        android:textSize="15dp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:text="@string/dev_list"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo"
+        app:layout_constraintVertical_bias="0.071">
 
     </TextView>
 
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ic_intro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
 
 
-</RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

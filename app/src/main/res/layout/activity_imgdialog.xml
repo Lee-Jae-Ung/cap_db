@@ -8,16 +8,18 @@
     android:padding="10dp">
 
     <TextView
+        android:padding="5dp"
         android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/blue"
         android:text="title"
         android:textSize="25dp"
-        android:background="@drawable/round_gray"
+        android:background="@drawable/parent_shadow"
         android:layout_gravity="center"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="400dp">
         <ImageView
             android:id="@+id/image1"
@@ -34,8 +36,9 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_gray"
-        android:text="OK"/>
+        android:background="@drawable/parent_shadow"
+        android:textColor="@color/blue"
+        android:text="O K"/>
 
 
 </LinearLayout>

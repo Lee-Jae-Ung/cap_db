@@ -1,47 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/swipe"
+        android:layout_height="match_parent"
+
+        tools:context=".Activitiy.MainActivity">
+
+
+        <!--
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_scrollFlags="scroll|snap|enterAlways"
+                app:menu="@menu/main_menu"
+                app:title="설비 목록">
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    !-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:context=".MainActivity">
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+            </androidx.appcompat.widget.Toolbar>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black">
+
+            </View>
+
+            <!--
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+    !-->
             <ScrollView
                 android:id="@+id/scroll2_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
+                android:padding="10dp"
                 android:fillViewport="true"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <ExpandableListView
                         android:id="@+id/expandable_list"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+
+                        android:childDivider="#F5F5F5"
+                        android:divider="#F5F5F5"
+                        android:dividerHeight="10dp">
 
                     </ExpandableListView>
                 </LinearLayout>
 
-            </ScrollView >
+            </ScrollView>
+
+            <!--
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            !-->
+
+        </LinearLayout>
 
 
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-</LinearLayout>
 

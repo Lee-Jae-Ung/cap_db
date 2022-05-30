@@ -6,14 +6,14 @@
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_main"
         android:label="@string/dev_list"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RESTAPI">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
-            android:name=".IntroActivity"
+            android:name=".Activitiy.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SetSection"></activity>
-        <activity android:name=".SetDevice"></activity>
-        <activity android:name=".DrawAEFeature"></activity>
-        <activity android:name=".DrawVIBFeature"></activity>
-        <activity android:name=".DrawStatus"></activity>
-        <activity android:name=".DrawTESTFeature"></activity>
+        <activity android:name=".Activitiy.MainActivity"></activity>
+        <activity android:name=".Activitiy.SetSection"></activity>
+        <activity android:name=".Activitiy.SetDevice"></activity>
+        <activity android:name=".Draw.DrawAEFeature"></activity>
+        <activity android:name=".Draw.DrawVIBFeature"></activity>
+        <activity android:name=".Draw.DrawStatus"></activity>
+        <activity android:name=".Draw.DrawTESTFeature"></activity>
+        <activity android:name=".Draw.DrawScatter"></activity>
+
+
 
     </application>
 

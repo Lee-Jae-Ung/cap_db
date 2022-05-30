@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="1"
+        android:title="refresh"
+        app:showAsAction="always|withText">
+
+    </item>
     <item
         android:id="@+id/search_section"
-        android:icon="@android:drawable/ic_menu_search"
-        android:title="Section Settings" />
+        android:title="구간 설정" />
     <item
         android:id="@+id/search_device"
-        android:icon="@android:drawable/ic_menu_search"
-        android:title="Device Settings" />
+        android:title="설비 설정" />
 </menu>

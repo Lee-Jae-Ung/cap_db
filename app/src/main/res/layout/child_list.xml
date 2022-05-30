@@ -2,82 +2,98 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="15dp"
-    android:orientation="horizontal"
+
+
+    android:orientation="vertical"
+    android:background="@drawable/parent_shadow"
+
     android:descendantFocusability="blocksDescendants">
 
-
-    <ImageView
-
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/arrow">
-
-    </ImageView>
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="2">
-        <TableRow>
-            <TextView
-                android:id="@+id/primarykey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center_vertical">
-            </TextView>
-            <TextView
-                android:id="@+id/ddname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="devicename"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="6">
+        android:orientation="horizontal">
+        <ImageView
 
-            </TextView>
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/arrow">
 
-            <TextView
-                android:id="@+id/pointid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="pointid"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1">
+        </ImageView>
 
-            </TextView>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2">
+            <TableRow>
+                <TextView
+                    android:id="@+id/primarykey"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textColor="#203864"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical">
+                </TextView>
+                <TextView
+                    android:id="@+id/ddname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="devicename"
+                    android:textStyle="bold"
+                    android:textColor="#385723"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical">
 
-        </TableRow>
+                </TextView>
+                <!--
+                            <TextView
+                                android:id="@+id/pointid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="pointid"
+                                android:layout_marginRight="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
 
-    </TableLayout>
+                            </TextView>
+                !-->
+            </TableRow>
 
-    <android.widget.Button
-        android:background="@drawable/round_black"
-        android:id="@+id/dialog_img_button"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="img" />
+        </TableLayout>
+    </LinearLayout>
 
-    <android.widget.Button
-        android:background="@drawable/round_black"
-        android:id="@+id/feature"
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="feature" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="right">
+        <android.widget.Button
+            android:background="@drawable/img_btn"
+            android:id="@+id/dialog_img_button"
+            android:layout_width="64dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <android.widget.Button
+            android:background="@drawable/feature_btn"
+            android:id="@+id/feature"
+            android:layout_width="126dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+
+
 
 
 

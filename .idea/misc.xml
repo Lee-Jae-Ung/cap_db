@@ -3,40 +3,60 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/back_white.xml" value="0.17" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/button_pressed.xml" value="0.1055" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/button_true.xml" value="0.1485" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/button_unpressed.xml" value="0.1115" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/feature_btn.xml" value="0.218" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/gradient.xml" value="0.17" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/green_circle.xml" value="0.1" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_feature_p_svg.xml" value="0.1" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_intro.xml" value="0.147" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_main_background.xml" value="0.1" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_refresh.xml" value="0.147" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/ic_setting.xml" value="0.136" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/img_btn.xml" value="0.218" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/list_line.xml" value="0.136" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/navy_circle.xml" value="0.1" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/parent_line.xml" value="0.141" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/parent_shadow.xml" value="0.1195" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/red_circle.xml" value="0.1" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/red_line.xml" value="0.176" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/reset_btn.xml" value="0.218" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/round_back.xml" value="0.136" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/round_black.xml" value="0.113" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/round_control.xml" value="0.136" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/round_gray.xml" value="0.113" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/round_setip.xml" value="0.136" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/status_btn.xml" value="0.218" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/table_devider.xml" value="0.136" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/drawable/yellow_circle.xml" value="0.1" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/font/custom_font_family.xml" value="0.36018518518518516" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/font/font_all.xml" value="0.3148148148148148" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_AEchart.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_aechart.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_imgdialog.xml" value="0.3641304347826087" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_main.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_scatter.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_service.xml" value="0.28351449275362317" />
-        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_setdevice.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_setdevice.xml" value="0.33" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_setip.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_setsection.xml" value="0.33" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_setting.xml" value="0.2717391304347826" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_status.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_testchart.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/activity_vibchart.xml" value="0.33" />
-        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/child_list.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/intro.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/child_list.xml" value="0.28607594936708863" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/intro.xml" value="0.25" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/parent_list.xml" value="0.3257918552036199" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/tool.xml" value="0.2717391304347826" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/layout/toolbar.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/menu/main_menu.xml" value="0.25" />
         <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/menu/tool_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/menu/toolbar.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/UOU/StudioProjects/capstone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
