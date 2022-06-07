@@ -38,7 +38,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-public class DrawVIBFeature extends AppCompatActivity implements View.OnClickListener{
+public class DrawSDGFeature extends AppCompatActivity implements View.OnClickListener{
 
     public static Context context_main;
 

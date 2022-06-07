@@ -41,9 +41,7 @@ public class DrawTESTFeature extends AppCompatActivity {
 
     int i=0;
 
-    double avg = 0.0;
     double rms = 0.0;
-    int predict = 0;
 
 
     String time="";
@@ -120,7 +118,7 @@ public class DrawTESTFeature extends AppCompatActivity {
         leftAxis.setTextColor(getResources().getColor(R.color.black));
         leftAxis.setDrawGridLines(true);
         leftAxis.setGridColor(getResources().getColor(R.color.white));
-        leftAxis.setAxisMaximum((float)10);
+        leftAxis.setAxisMaximum((float)0.1);
         leftAxis.setAxisMinimum((float)-0.1);
 
         YAxis rightAxis = chart.getAxisRight();

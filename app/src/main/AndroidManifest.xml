@@ -25,7 +25,7 @@
         <activity android:name=".Activitiy.SetSection"></activity>
         <activity android:name=".Activitiy.SetDevice"></activity>
         <activity android:name=".Draw.DrawAEFeature"></activity>
-        <activity android:name=".Draw.DrawVIBFeature"></activity>
+        <activity android:name=".Draw.DrawSDGFeature"></activity>
         <activity android:name=".Draw.DrawStatus"></activity>
         <activity android:name=".Draw.DrawTESTFeature"></activity>
         <activity android:name=".Draw.DrawScatter"></activity>

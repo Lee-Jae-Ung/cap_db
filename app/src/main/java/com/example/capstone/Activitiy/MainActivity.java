@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,10 +25,9 @@ import com.example.capstone.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class MainActivity extends AppCompatActivity {
 
     public static Context mContext;
-    ImageView connection;
 
     int count=0;
     SDbOpenHelper mSDbOpenHelper;
@@ -47,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     Toolbar topAppBar;
 
 
+    //앱이 처음켜지면 실행되는 곳으로 최신화된 계층형 리스트들의 정보를 나타낸다.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
         }
         Log.v("arrrray","setlist 진입");
-        mDDbOpenHelper.close();
+        //mDDbOpenHelper.close();
         count=0;
         setListItems();
 
@@ -152,12 +151,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
 
 
-    @Override
-    public void onRefresh(){
-        updateLayoutView();
 
-        swipeRefreshLayout.setRefreshing(false);
-    }
     public void updateLayoutView(){
         Intent intent = getIntent();
         finish(); //현재 액티비티 종료 실시

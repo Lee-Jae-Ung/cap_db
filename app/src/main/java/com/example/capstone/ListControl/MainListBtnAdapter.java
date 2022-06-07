@@ -16,7 +16,7 @@ import com.example.capstone.Activitiy.MainActivity;
 import com.example.capstone.Connection.Task;
 import com.example.capstone.Draw.DrawStatus;
 import com.example.capstone.Draw.DrawTESTFeature;
-import com.example.capstone.Draw.DrawVIBFeature;
+import com.example.capstone.Draw.DrawSDGFeature;
 import com.example.capstone.R;
 
 import java.util.ArrayList;
@@ -188,7 +188,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
 
                 else {
                     //Log.v("but","VIB");
-                    Intent intent1 = new Intent(context.getApplicationContext(), DrawVIBFeature.class);
+                    Intent intent1 = new Intent(context.getApplicationContext(), DrawSDGFeature.class);
                     intent1.putExtra("ip",getGroup(groupPosition).getIp());
                     intent1.putExtra("facility",getChild(groupPosition, childPosition).getPointid());
                     intent1.putExtra("type",finalChild_type);
@@ -223,7 +223,7 @@ public class MainListBtnAdapter extends BaseExpandableListAdapter {
 
                 }
                 else if(finalChild_type.equals("test")){
-                    iv1.setImageResource(R.drawable.hydro);
+                    iv1.setImageResource(R.drawable.daq);
 
                 }
 
